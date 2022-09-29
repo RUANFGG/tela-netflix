@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="https://br.depositphotos.com" method="post">
+        <fieldset>
+            <legend><STRONG>LOGIN</STRONG></legend>
+        <p>
+            <input type="text" placeholder="Digite seu nome" id="nome">
+        </p>
+        <p>
+            <input type="password" placeholder="Digite sua senha" id="senha" required>
+        </p>
+        <p>
+            <input type="submit" value="ACESSAR" onclick="logar(); return false">
+        </p>
+    </fieldset>
+        <p>
+            <input type="submit" value="CADASTRE-SE">
+        </p>
+        <P>
+            <input type="submit" value="ESQUECI MINHA SENHA">
+        </P>
+    </form>
+</body>
+<script>
+    function logar(){
+        var nome = document.getElementById("nome").value;
+        var senha = document.getElementById("senha").value;
+        if(nome == "admin" && senha == "12345"){
+            alert("Sucesso")
+            location.href = "home.html";
+        }else{
+            alert("Usuário ou Senha inválidos")
+        }
+    }
+
+</script>
+</html>
